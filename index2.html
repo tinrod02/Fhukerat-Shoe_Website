@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: url('your-background-image.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+        .container {
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 90%;
+            max-width: 400px;
+            backdrop-filter: blur(10px);
+        }
+        .container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .login-logo {
+            display: block;
+            margin-top: 20px;
+            font-size: 25px;
+            margin-left: 15px;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .login-logo img {
+            width: 40px;
+            height: 40px;
+        }
+        .social-login {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 20px;
+            cursor: pointer;
+        }
+        .social-login img {
+            margin-right: 10px;
+        }
+        .social-login a {
+            text-decoration: none;
+            color: black;
+        }
+        .social-login a:hover {
+            text-decoration: underline;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group input {
+            width: calc(100% - 20px);
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            display: block;
+            margin: 0 auto;
+        }
+        .login-btn {
+            background-color: rgb(238, 33, 128);
+            border: none;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            width: 100%;
+            cursor: pointer;
+        }
+        .login-btn:hover {
+            background-color: rgb(237, 95, 161);
+        }
+        .links {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 12px;
+        }
+        .links a {
+            text-decoration: none;
+            color: rgb(238, 33, 128);
+            margin: 0 10px;
+        }
+        .links a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <script src="https://accounts.google.com/gsi/client"></script>
+   
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            var username = this.username.value;
+            var password = this.password.value;
+
+            // Perform your login logic here, e.g., validation, authentication
+
+            // Example: Redirect to shoe.html after successful login
+            var base_url = 'file:///C:/Users/ASUS/Desktop/sheo-website-master/shoe.html';
+            window.location.href = base_url;  // Replace with your actual logic
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="login-logo">
+            <a style="color: rgb(238, 33, 128)">FHUKERAT</a>
+        </div>
+        <h2>Login</h2>
+        <div id="googleSignInDiv" class="social-login">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Logo_2013_Google.png" alt="Google" width="24">
+            <a href="#">Log in with Google</a>
+        </div>
+        <form id="loginForm" action="/api/login" method="POST">
+            <div class="form-group">
+                <input type="text" name="username" placeholder="Username">
+            </div>
+            <div class="form-group">
+                <input type="password" name="password" placeholder="Password" autocomplete="current-password">
+            </div>
+            <button type="submit" class="login-btn">Login</button>
+        </form>
+        <div class="links">
+            <a onclick="forgotPassword()">Forgot your username or password?</a>
+            <br>
+        </div>
+    </div>    
+</body>
+</html>

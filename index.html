@@ -1,0 +1,419 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="font-awesome/css/font-awesome.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <header>
+            <div id="menu-bar" class="fa fa-bars"></div>
+            <a href="index1.html" class="logo" style="color: rgb(238, 33, 128)">FHUKERAT</a>
+            <nav class="navbar">
+                <a href="#home">Home</a>
+                <a href="#product">Product</a>
+                <a href="#featured">Featured</a>
+                <a href="#blog">Blog</a>
+                <a href="#news">News</a>
+            </nav>
+            <div class="icons">
+                <a id="mainFavoriteBtn" onclick="toggleFavoritesTab()"><i class="fa fa-heart"></i></a>
+                <a id="cartButton" target="_blank"><i class="fa fa-shopping-cart"></i></a>
+                <a href="index2.html"><i class="fa fa-user"></i></a>
+            </div>
+        </header>
+        <!--end header-->
+        <section class="home" id="home">
+            <div class="slide-container active">
+                <div class="slide">
+                    <div class="content">
+                        <span>Nike Sport Shoes</span>
+                        <h3>Nike Metcon Shoes</h3>
+                        <p>
+                            Step into Precision with Nike Metron.
+                        </p>
+                        <a href="#" class="btn add-to-cart-btn" onclick="addToCart('Nike Metcon Shoes 98','img/slide/1.png','9,999')">add to cart</a>
+                    </div>
+                    <div class="image">
+                        <img src="img/slide/1.png" class="shoe">
+                    </div>
+                </div>
+            </div>
+            <div class="slide-container">
+                <div class="slide">
+                    <div class="content">
+                        <span>Nike Sport Shoes</span>
+                        <h3>Nike Metcon Shoes</h3>
+                        <p>
+                            Push Harder, Go Further.
+                        </p>
+                        <a href="#" class="btn add-to-cart-btn" onclick="addToCart('Nike Metcon Shoes 8','img/slide/2.png','8,995')">add to cart</a>
+                    </div>
+                    <div class="image">
+                        <img src="img/slide/2.png" class="shoe">
+                    </div>
+                </div>
+            </div>
+            <div class="slide-container">
+                <div class="slide">
+                    <div class="content">
+                        <span>Nike Sport Shoes</span>
+                        <h3>Nike Metcon Shoes</h3>
+                        <p>
+                            Power Through Your Workout.
+                        </p>
+                        <a href="#" class="btn add-to-cart-btn" onclick="addToCart('Nike Metcon Shoes 4','img/slide/3.png','4,999')">add to cart</a>
+                    </div>
+                    <div class="image">
+                        <img src="img/slide/3.png" class="shoe">
+                    </div>
+                </div>
+            </div>
+            <div class="slide-container">
+                <div class="slide">
+                    <div class="content">
+                        <span>Nike Sport Shoes</span>
+                        <h3>Nike Metcon Shoes</h3>
+                        <p>
+                            Crush Your Limits with Nike Metcon.
+                        </p>
+                        <a href="#" class="btn add-to-cart-btn" onclick="addToCart('Nike Metcon Shoes 6','img/slide/4.png','3,999')">add to cart</a>
+                    </div>
+                    <div class="image">
+                        <img src="img/slide/4.png" class="shoe">
+                    </div>
+                </div>
+            </div>
+
+            <div id="prev" class="fa fa-angle-left" onclick="prev();"></div>
+            <div id="next" class="fa fa-angle-right" onclick="next();"></div>
+        </section>
+        <!--end home-->
+        <section class="product" id="product">
+            <h1 class="heading">latest <span>products</span></h1>
+            <div class="box-container">
+                <div class="box">
+                    <div class="icons">
+                        <a class="fa fa-heart" onclick="toggleFavorite(this)"></a>
+                        <a class="fa fa-share" id="shareBtn"></a> 
+                        <a class="fa fa-eye" onclick="toggleShoesVisibility(this)"></a>
+                    </div>
+                    <div class="content">
+                        <img src="img/product4/1.jpg" alt="">
+                        <h3>Nike Metcon 9</h3>
+                        <div class="price">₱10,000 <span>₱21,780</span></div>
+                        <div class="stars">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa fa-star-half-o"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="icons">
+                        <a class="fa fa-heart" onclick="toggleFavorite(this)"></a>
+                        <a class="fa fa-share" id="shareBtn"></a> 
+                        <a class="fa fa-eye" onclick="toggleShoesVisibility(this)"></a>
+                    </div>
+                    <div class="content">
+                        <img src="img/product4/2.jpg" alt="">
+                        <h3>Nike Free Metcon 5</h3>
+                        <div class="price">₱7,895 <span>₱7,895</span></div>
+                        <div class="stars">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="icons">
+                        <a class="fa fa-heart" onclick="toggleFavorite(this)"></a>
+                        <a class="fa fa-share" id="shareBtn"></a> 
+                        <a class="fa fa-eye" onclick="toggleShoesVisibility(this)"></a>
+                    </div>
+                    <div class="content">
+                        <img src="img/product4/3.jpg" alt="">
+                        <h3>Nike Free Metcon 6</h3>
+                        <div class="price">₱6,895 <span>₱7,895</span></div>
+                        <div class="stars">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="icons">
+                        <a class="fa fa-heart" onclick="toggleFavorite(this)"></a>
+                        <a class="fa fa-share" id="shareBtn"></a> 
+                        <a class="fa fa-eye" onclick="toggleShoesVisibility(this)"></a>
+                    </div>
+                    <div class="content">
+                        <img src="img/product4/5.jpg" alt="">
+                        <h3>Nike Free Metcon 5</h3>
+                        <div class="price">₱7,659 <span>₱8,000</span></div>
+                        <div class="stars">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="icons">
+                        <a class="fa fa-heart" onclick="toggleFavorite(this)"></a>
+                        <a class="fa fa-share" id="shareBtn"></a> 
+                        <a class="fa fa-eye" onclick="toggleShoesVisibility(this)"></a>
+                    </div>
+                    <div class="content">
+                        <img src="img/product4/7.png" alt="">
+                        <h3>Nike Metcon 9</h3>
+                        <div class="price">₱6,895 <span>₱8,000</span></div>
+                        <div class="stars">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="icons">
+                        <a class="fa fa-heart" onclick="toggleFavorite(this)"></a>
+                        <a class="fa fa-share" id="shareBtn"></a> 
+                        <a class="fa fa-eye" onclick="toggleShoesVisibility(this)"></a>
+                    </div>
+                    <div class="content">
+                        <img src="img/product4/8.png" alt="">
+                        <h3>Nike Metcon 9 By You</h3>
+                        <div class="price">₱7,895 <span>₱10,000</span></div>
+                        <div class="stars">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--end product-->
+        <section class="featured" id="featured">
+            <h1 class="heading">New <span>Product</span></h1>
+            <div class="row">
+                <div class="image-container">
+                    <div class="small-image">
+                        <img src="img/product1/1.jpg" alt="" class="featured-image-1">
+                        <img src="img/product1/2.jpg" alt="" class="featured-image-1">
+                        <img src="img/product1/3.jpg" alt="" class="featured-image-1">
+                        <img src="img/product1/4.jpg" alt="" class="featured-image-1">
+                    </div>
+                    <div class="big-image">
+                        <img src="img/product1/1.jpg" alt="" class="big-image-1">
+                    </div>
+                </div>
+                <div class="content">
+                    <h3>new nike airforce 9</h3>
+                    <div class="stars">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa fa-star-half-o"></i>
+                    </div>
+                    <p>
+                       Men's Workout Shoes <br> 4 colours
+                    </p>
+                    <div class="price">₱8,000 <span>₱10,000</span></div>
+                    <a href="#" class="btn add-to-cart-btn" onclick="addToCart('Nike Airforce 9','img/product1/1.jpg','8,000')">add to cart</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="image-container">
+                    <div class="small-image">
+                        <img src="img/product2/1.jpg" alt="" class="featured-image-2">
+                        <img src="img/product2/2.jpg" alt="" class="featured-image-2">
+                        <img src="img/product2/3.jpg" alt="" class="featured-image-2">
+                        <img src="img/product2/4.jpg" alt="" class="featured-image-2">
+                    </div>
+                    <div class="big-image">
+                        <img src="img/product2/1.jpg" alt="" class="big-image-2">
+                    </div>
+                </div>
+                <div class="content">
+                    <h3>new nike airforce 8</h3>
+                    <div class="stars">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                    <p>
+                        Men's Workout Shoes <br> 9 colours
+                    </p>
+                    <div class="price">₱9,999 <span>₱10,000</span></div>
+                    <a href="#" class="btn add-to-cart-btn" onclick="addToCart('Nike Airforce 8','img/product2/1.jpg','9,999')">add to cart</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="image-container">
+                    <div class="small-image">
+                        <img src="img/product3/1.jpg" alt="" class="featured-image-3">
+                        <img src="img/product3/2.jpg" alt="" class="featured-image-3">
+                        <img src="img/product3/3.jpg" alt="" class="featured-image-3">
+                        <img src="img/product3/4.jpg" alt="" class="featured-image-3">
+                    </div>
+                    <div class="big-image">
+                        <img src="img/product3/1.jpg" alt="" class="big-image-3">
+                    </div>
+                </div>
+                <div class="content">
+                    <h3>new nike airforce 6</h3>
+                    <div class="stars">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                    <p>
+                       Men's Workout Shoes <br> 3 colours
+                    </p>
+                    <div class="price">₱8,999 <span>₱9,000</span></div>
+                    <a href="#" class="btn add-to-cart-btn" onclick="addToCart('Nike Airforce 6','img/product3/1.jpg','8,999')">add to cart</a>
+                </div>
+            </div>
+        </section>
+        <!--end featured-->
+        <div id="cartTab" class="cart-tab">
+            <div class="cart-tab-content">
+                <span class="close-tab">&times;</span>
+                <h2>Your Cart</h2>
+                <div id="cartItems" class="cart-items">
+                    <!-- Cart items will be dynamically added here -->
+                </div>
+                <div class="cart-actions">
+                    <button id="checkoutBtn" class="btn checkout-btn" onclick="checkout(this)">Checkout</button>
+                    <a href="img/NIKE.gif" class="niketoh"></a>
+                    <div class="nike-placeholder"></div>
+                </div>
+            </div>
+        </div>
+        <!-- Favorites Tab Container -->
+        <div id="favoritesTab" class="favorites-tab">
+            <div class="favorites-tab-content">
+                <span class="close-tab" onclick="toggleFavoritesTab()">&times;</span>
+                <h2>Your Favorites</h2>
+                <div id="favoriteItems" class="favorites-items">
+                    <!-- Favorite shoes will be dynamically added here -->
+                </div>
+            </div>
+        </div>
+        <section class="blog" id="blog">
+            <h1 class="heading">Team <span>Fhukerat</span></h1>
+            <div class="box-container">
+                <div class="box">
+                    <img src="img/team/team4.jpg" alt="">
+                    <h3>Cristina Gail Rodelas</h3>
+                    <p>
+                        FULL STACK WEBSITE DEVELOPER <br> SUMMA CUM LAUDE
+                    </p>
+                    <div class="stars">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa fa-star"></i>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="img/team/team5.jpg" alt="">
+                    <h3>Bianca Sophia Roxas</h3>
+                    <p>
+                        DATA ANALYST <br> SUMMA CUM LAUDE
+                    </p>
+                    <div class="stars">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa fa-star-half-o"></i>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="img/team/team2.jpg" alt="">
+                    <h3>Francis Raven Salamo</h3>
+                    <p>
+                        WEBSITE DEVELOPER <br> MAGNA CUM LAUDE
+                    </p>
+                    <div class="stars">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa fa-star-half-o"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="img/team/team3.jpg" alt="">
+                    <h3>Nicole Patrice Torrero</h3>
+                    <p>
+                        COMPUTER SCIENTIST <br> MAGNA CUM LAUDE
+                    </p>
+                    <div class="stars">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa fa-star"></i>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="img/team/team1.jpg" alt="">
+                    <h3>Gizelle Rada</h3>
+                    <p>
+                        SOFTWARE ENGINEER <br> CUM LAUDE
+                    </p>
+                    <div class="stars">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa fa-star-half-o"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--end blog-->
+        <section class="news" id="news">
+            <div class="content">
+                <h3>monthly news letter</h3>
+                <p>
+                    Do you have questions? Kindly message us below.
+                </p>
+                <form id="emailForm">
+                    <input type="email" placeholder="Please enter your email" class="email" id="emailInput" required>
+                    <input type="submit" value="Save" class="btn">
+                </form>
+            </div>
+        </section>
+        <!--end news-->
+        <section class="cridet" id="cridet">
+            <div class="box">
+                <h3>all rights reserved by fhukerat</h3>
+            </div>
+        </section>
+    </body>
+</html>
+
+<script src="js/script.js"></script>
